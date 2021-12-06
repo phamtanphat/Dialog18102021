@@ -25,10 +25,10 @@ public class AppDialog {
         }
         // set vi trí hiển thị dialog
         WindowManager.LayoutParams layoutParams = window.getAttributes();
-        layoutParams.gravity = Gravity.BOTTOM;
+        layoutParams.gravity = Gravity.CENTER;
 
         // kich thước chiều ngang và chiều cao dialog
-        window.setLayout(WindowManager.LayoutParams.WRAP_CONTENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
         //set màu nền khi hiện dialog
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 

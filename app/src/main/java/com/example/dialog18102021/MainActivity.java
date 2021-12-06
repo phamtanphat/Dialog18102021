@@ -55,5 +55,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBtnCustomDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDialog.setDialogConfirm(MainActivity.this, new OnListenerConfirmDialog() {
+                    @Override
+                    public void onDelete() {
+                        Toast.makeText(MainActivity.this, "Delete", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
     }
 }
